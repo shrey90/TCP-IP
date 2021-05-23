@@ -60,22 +60,4 @@ net.core.rmem_max=262144
 
 net.core.wmem_max=262144
 
-To improve fail over performance in a RAC cluster, consider changing the following IP kernel parameters as well:
 
-net.ipv4.tcp_keepalive_time
-
-net.ipv4.tcp_keepalive_intvl
-
-net.ipv4.tcp_retries2
-
-net.ipv4.tcp_syn_retries
-
-On Red Hat Enterprise Linux systems the default range of IP port numbers that are allowed for TCP and UDP traffic on the server is too low for 9i and 10g systems. Oracle recommends the following port range:
-
-# sysctl -w net.ipv4.ip_local_port_range="1024 65000"
-
-To make the change permanent, add the following line to the /etc/sysctl.conf file, which is used during the boot process:
-
-net.ipv4.ip_local_port_range=1024 65000
-
-The first number is the first local port allowed for TCP and UDP traffic, and the second number is the last port number.
