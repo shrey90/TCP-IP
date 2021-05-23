@@ -30,8 +30,7 @@ cat /proc/sys/net/core/rmem_default
 
 131071 → 262144
 
-Oracle recommends the default and maximum send buffer size (SO_SNDBUF socket option) and receive buffer size (SO_RCVBUF socket option) to 
-_be set to 256 KB. The receive buffers are used by TCP and UDP to hold received data until it is read by the application. The receive buffer cannot overflow because the peer is not allowed to send data beyond the buffer size window. This means that datagrams will be discarded if they do not fit in the socket receive buffer. This could cause the sender to overwhelm the receiver.
+
 
 The default and maximum window size can be changed in the proc file system without reboot:
 
