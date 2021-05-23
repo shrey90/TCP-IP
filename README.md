@@ -70,8 +70,6 @@ net.ipv4.tcp_retries2
 
 net.ipv4.tcp_syn_retries
 
-Changing these settings may be highly dependent on your system, network, and other applications. For suggestions, see Metalink Note:249213.1 and Note:265194.1.
-
 On Red Hat Enterprise Linux systems the default range of IP port numbers that are allowed for TCP and UDP traffic on the server is too low for 9i and 10g systems. Oracle recommends the following port range:
 
 # sysctl -w net.ipv4.ip_local_port_range="1024 65000"
